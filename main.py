@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 
 from H1Dn import H1Dn
 
-def make_scale():
+def make_scale(nof_bins_hi2me):
     """
     """
     lo = 0.01
@@ -18,7 +18,6 @@ def make_scale():
     hi = 1.33000000001
     
     # bins in hi-to-me region
-    nof_bins_hi2me = 5 
     step = (hi - me)/float(nof_bins_hi2me)
     
     scale = []
@@ -73,7 +72,7 @@ def load_events(filename):
         
     return events
 
-scale = make_scale()
+scale = make_scale(8)
 print(len(scale))
 #print(scale)
 
