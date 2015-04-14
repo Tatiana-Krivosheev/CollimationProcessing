@@ -53,10 +53,10 @@ def load_events(filename):
     
     with open(filename) as f:
         for line in f:
-            if line.find("G4W") != -1:
-                continue
-            if line.find("GGG") != -1:
-                continue
+            #if line.find("G4W") != -1:
+            #    continue
+            #if line.find("GGG") != -1:
+            #    continue
 
             line = line.strip()
             s    = line.split()
@@ -72,11 +72,11 @@ def load_events(filename):
         
     return events
 
-scale = make_scale(8)
+scale = make_scale(5)
 print(len(scale))
 #print(scale)
 
-events = load_events("../run25/pdata")
+events = load_events("../run25/photons")
 
 print(len(events))
 
